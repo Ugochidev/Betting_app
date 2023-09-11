@@ -1,0 +1,12 @@
+{
+  "name": "Betting_app",
+  "version": "1.0.0",
+  "description": "A Betting App",
+  "main": "app.js",
+  "repository": "https://github.com/Ugochidev/Betting_app",
+  "author": "Ugochidev",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^5.2.2"
+  }
+}
