@@ -8,7 +8,7 @@ class CreateUser {
     next: NextFunction
   ): Promise<Response> {
     try {
-      const { tempId, first_name, last_name, password, email } = req.body;
+      const { tempId, first_name, last_name, password,} = req.body;
       console.log(req.body);
 
       const registerUserService = new RegisterUserService();
@@ -18,7 +18,6 @@ class CreateUser {
         first_name,
         last_name,
         password,
-        email,
       });
 
       return res.status(201).json({
