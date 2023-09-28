@@ -26,6 +26,10 @@ const UserSchema: Schema = new Schema<IUser>(
     avatar: {
       type: String,
     },
+    referral_id: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,

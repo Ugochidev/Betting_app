@@ -7,10 +7,5 @@ export default celebrate({
     last_name: Joi.string().required(),
     password: Joi.string().min(8).required(),
     referral_id: Joi.string(),
-    phone_id: Joi.string(),
-    // phone_id: Joi.string().required(),
-    // device_token: Joi.string().required(),
-    device_token: Joi.string(),
-    email: Joi.string().required(),
   }),
 });

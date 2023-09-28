@@ -7,5 +7,6 @@ export default interface IUser {
   username: string;
   phone_number: string;
   password: string;
+  referral_id: string;
   avatar?: string;
 }

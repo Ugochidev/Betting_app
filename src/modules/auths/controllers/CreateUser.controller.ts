@@ -9,7 +9,6 @@ class CreateUser {
   ): Promise<Response> {
     try {
       const { tempId, first_name, last_name, password,} = req.body;
-      console.log(req.body);
 
       const registerUserService = new RegisterUserService();
 

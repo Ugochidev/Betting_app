@@ -19,7 +19,7 @@ export const generateOTP = () => {
 };
 
 export const generateUsername = () => {
-  const length = 4;
+  const length = 3;
   const charset = "0123456789";
   let retVal = "";
   for (let i = 0, n = charset.length; i < length; ++i) {

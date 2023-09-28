@@ -17,7 +17,10 @@ class UserRepository {
     const user = await this.user.findOne({ phone_number });
     return user;
   }
-
+  async findByUsername(username: string): Promise<IUserModel | null> {
+    const user = await this.user.findOne({ username });
+    return user;
+  }
 
   async save(user: IUserModel) {
     await user.save();
@@ -25,7 +28,7 @@ class UserRepository {
 
   async findById(id: string): Promise<IUserModel | null> {
     const user = await this.user.findById(id);
-    
+
     return user;
   }
 

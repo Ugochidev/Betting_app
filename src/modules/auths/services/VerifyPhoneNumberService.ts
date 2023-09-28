@@ -1,5 +1,4 @@
 import UserRepository from "../../users/models/repositories/UserRepository";
-// import Cache from "../../../shared/services/Redis";
 import IPhoneNumberDTO from "../../users/dtos/IPhoneNumberDTO";
 import OtpRepository from "../../users/models/repositories/OtpRepository";
 import ITempIdDTO from "../../users/dtos/ITempIdDTO";
@@ -10,12 +9,10 @@ import { v4 } from "uuid";
 
 class VerifyPhoneNumberService {
   private userRepository: UserRepository;
-  // private cache: Cache;
   private otpRepository: OtpRepository;
 
   constructor() {
     this.userRepository = new UserRepository();
-    // this.cache = new Cache();
     this.otpRepository = new OtpRepository();
   }
 
