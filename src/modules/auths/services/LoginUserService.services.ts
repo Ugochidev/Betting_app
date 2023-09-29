@@ -3,20 +3,16 @@ import UserRepository from "../../users/models/repositories/UserRepository";
 import AppError from "../../../shared/utils/AppError";
 import Bcrypt from "../../../shared/services/Bcrypt";
 import Jwt from "../../../shared/services/JWT";
-// import { generateOTP } from "../../../shared/utils";
-import OtpRepository from "../../users/models/repositories/OtpRepository";
 import ICreateSessionDTO from "../../users/dtos/ICreateSessionDTO"
-// import { Otp } from "../models/entities/Otp";
+
 
 class LoginUserService {
   private userRepository: UserRepository;
-  private otpRepository: OtpRepository;
   private bcrypt: Bcrypt;
   private jwt: Jwt;
 
   constructor() {
     this.userRepository = new UserRepository();
-    this.otpRepository = new OtpRepository();
     this.bcrypt = new Bcrypt();
     this.jwt = new Jwt();
   }

@@ -2,11 +2,13 @@ import { Router } from "express";
 import VerifyPhoneNumber from "../controllers/VerifyPhoneNumber.controller";
 import CreateUser from "../controllers/CreateUser.controller";
 import Login from "../controllers/LoginUser.controller";
+import ChangePassword from "../controllers/ChangePassword.controller";
 
 import validatePhoneNumber from "../validators/phoneNumberValidator";
 import verifyPhoneNumberValidator from "../validators/verifyPhoneNumberValidator";
 import validateCreateUser from "../validators/userCreateValidator";
 import loginValidator from "../validators/loginValidator";
+import changePasswordValidator from "../validators/changePasswordValidator";
 
 const router = Router();
 const verifyPhoneNumber = new VerifyPhoneNumber();
