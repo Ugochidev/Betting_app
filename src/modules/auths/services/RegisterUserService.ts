@@ -53,10 +53,10 @@ class RegisterUserService {
     });
 
     await this.otpRepository.deleteTempId(tempId);
-    delete newUser.password;
+    newUser.password= undefined
     console.log(newUser);
     
-    return newUser ;
+    return newUser;
   }
 }
 export default RegisterUserService;
