@@ -18,6 +18,8 @@ class ChangePasswordService {
     new_password,
   }: IChangePasswordDTO): Promise<void> {
     const user = await this.userRepository.findById(id);
+    console.log(user);
+    
 
     if (!user) {
       throw new AppError("Unauthorized", 401);

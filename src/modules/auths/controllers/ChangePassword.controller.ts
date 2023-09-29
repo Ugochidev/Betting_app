@@ -6,6 +6,7 @@ class ChangePassword {
     try {
       const { old_password, new_password } = req.body;
       const id = req.user;
+      console.log(req.user);
 
       const changePasswordService = new ChangePasswordService();
       await changePasswordService.execute({
