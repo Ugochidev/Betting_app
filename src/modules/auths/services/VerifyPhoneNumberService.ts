@@ -55,7 +55,6 @@ class VerifyPhoneNumberService {
 
       return { otp };
     } catch (error: any) {
-      console.log(error);
       throw new AppError(error);
     }
   }
@@ -74,7 +73,6 @@ class VerifyPhoneNumberService {
     const verificationOtpExists = await this.otpRepository.findByPhoneNumber(
       phone_number
     );
-    console.log(verificationOtpExists);
 
     if (!verificationOtpExists) {
       throw new AppError("Phone Number not found for verification!", 404);

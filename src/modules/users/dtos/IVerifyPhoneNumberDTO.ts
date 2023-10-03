@@ -1,4 +1,4 @@
 export default interface IVerifyPhoneNumber {
-  phone_number: string;
+  phone_number?: string;
   otp: string;
 }

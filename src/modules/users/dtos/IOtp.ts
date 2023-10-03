@@ -1,7 +1,7 @@
 export default interface IOtpDTO {
-  user: string;
+  user?: string;
   otp: string;
-  for: string;
+  for?: string;
   data?: {
     phone_number?: string;
     phoneNumberVerified?: boolean;
