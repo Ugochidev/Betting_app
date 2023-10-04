@@ -31,10 +31,10 @@ export default function errorHandler(
     });
   }
 
-  if (error instanceof MulterError && error.code === "LIMIT_UNEXPECTED_FILE") {
+  if (error instanceof MulterError && error.message === "LIMIT_UNEXPECTED_FILE") {
     return response.status(400).json({
       success: false,
-      message: `${error.message} ${error.field}, max image uploads allowed are 2.`,
+      message: `${error.message} ${error.message}, max image uploads allowed are 2.`,
       data: null,
     });
   }
