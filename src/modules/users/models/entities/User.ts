@@ -25,6 +25,9 @@ const UserSchema: Schema = new Schema<IUser>(
     },
     avatar: {
       type: String,
+      required: true,
+      default:
+        "https://minervastrategies.com/wp-content/uploads/2016/03/default-avatar.jpg",
     },
     referral_id: {
       type: String,

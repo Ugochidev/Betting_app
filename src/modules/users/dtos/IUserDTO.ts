@@ -1,5 +1,3 @@
-// import { AnyARecord } from "dns";
-
 export default interface IUser {
   _id?: any;
   first_name: string;
