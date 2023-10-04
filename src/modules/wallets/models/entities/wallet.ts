@@ -10,6 +10,7 @@ const WalletSchema: Schema = new Schema<IWallet>(
     account_balance: {
       type: String,
       required: true,
+      default: "0",
     },
     bet_id: {
       type: String,
