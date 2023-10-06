@@ -6,6 +6,7 @@ import AppError from "../../../shared/utils/AppError";
 import Bcrypt from "../../../shared/services/Bcrypt";
 import WalletRepository from "../../wallets/models/repositories/WalletRepository";
 import { v4 } from "uuid";
+import { Wallet } from '../../wallets/models/entities/Wallet';
 
 class RegisterUserService {
   private userRepository: UserRepository;
@@ -62,12 +63,13 @@ class RegisterUserService {
       account_balance: "0",
       bet_id,
       my_bet: 0,
+      user_id: newUser._id,
     });
     await this.otpRepository.deleteTempId(tempId);
     newUser.password = undefined;
     console.log(newUser);
 
-    return newUser;
+    return {newUser, wallet};
   }
 }
 export default RegisterUserService;
