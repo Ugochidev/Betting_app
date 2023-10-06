@@ -5,7 +5,7 @@ import { generateReferralId, generateUsername } from "../../../shared/utils";
 import AppError from "../../../shared/utils/AppError";
 import Bcrypt from "../../../shared/services/Bcrypt";
 import WalletRepository from "../../wallets/models/repositories/WalletRepository";
-// import { nanoid } from "nanoid";
+import { v4 } from "uuid";
 
 class RegisterUserService {
   private userRepository: UserRepository;
@@ -55,17 +55,15 @@ class RegisterUserService {
       password: hashedPassword,
       referral_id,
     });
- 
-    const nanoid = await import("nanoid");
-       const bet_id = nanoid.nanoid(8);
-       console.log(nanoid);
+
+    const bet_id = v4(8);
     const wallet = await this.walletRepository.create({
       username,
-      account_balance : "0",
+      account_balance: "0",
       bet_id,
-      my_bet :0
+      my_bet: 0,
     });
-     await this.otpRepository.deleteTempId(tempId);
+    await this.otpRepository.deleteTempId(tempId);
     newUser.password = undefined;
     console.log(newUser);
 
