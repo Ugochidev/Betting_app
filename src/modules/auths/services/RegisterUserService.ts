@@ -5,8 +5,7 @@ import { generateReferralId, generateUsername } from "../../../shared/utils";
 import AppError from "../../../shared/utils/AppError";
 import Bcrypt from "../../../shared/services/Bcrypt";
 import WalletRepository from "../../wallets/models/repositories/WalletRepository";
-import { v4 } from "uuid";
-import { Wallet } from '../../wallets/models/entities/Wallet';
+import { v4 } from "uuid"
 
 class RegisterUserService {
   private userRepository: UserRepository;
@@ -67,7 +66,6 @@ class RegisterUserService {
     });
     await this.otpRepository.deleteTempId(tempId);
     newUser.password = undefined;
-    console.log(newUser);
 
     return {newUser, wallet};
   }
